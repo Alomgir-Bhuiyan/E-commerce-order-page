@@ -1,0 +1,206 @@
+@font-face {
+      font-family: sgf;
+      src: url(../assets/fonts/SportingGrotesque-Regular.otf);
+    }
+    
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: sgf;
+    }
+    body {
+      background-color: #00282b;
+    }
+    .order {
+      background-color: #f9f5f5;
+      padding: 25px 10px;
+      height: min-content;
+      width: 80vw;
+      border-radius: 12px;
+      margin: 2vh auto;
+      
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .order .info {
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: capitalize;
+      display: grid; 
+      grid-template-columns: repeat(2, min-content);
+      grid-template-rows: 4;
+      justify-content: space-between;
+      row-gap: 25px;
+    }
+    .order-btn {
+      text-align: center;
+      background-color: limegreen; 
+      width: 95%;
+      margin: auto; 
+      padding: 10px 0;
+      border-radius: 8px; 
+      
+      & a {
+        color: white; 
+        text-decoration: none;
+      }
+    }
+    
+    .billing-address form label {
+      font-size: 1rem;
+    }
+    .billing-address form input {
+      outline: none;
+    }
+    .billing-address form input{
+      padding: 10px;
+      width: 90%;
+      margin: auto;
+      margin: 0 0 15px 0;
+      border: 1.2px dashed black;
+      border-radius: 5px;
+    }
+    .in-one-row {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10%;
+      justify-content: space-around;
+    }
+    .por-2 {
+      width: 87%;
+      
+      & label {
+        white-space: nowrap;
+      }
+    }
+    .billing-address form select {
+      padding: 10px;
+      border: 1.2px solid grey;
+      border-radius: 5px;
+      outline: none;
+      background-color: transparent;
+    }
+    .billing-address form input:valid {
+      outline-color: #58e64d;
+      outline-style: dashed;
+      outline-width: 2px;
+      border: none;
+      color: #32d725;
+    }
+    .billing-address form input:invalid{
+      color: red;
+    }
+    .order > h3 {
+      margin: 0;
+      padding: 0;
+    }
+    #bkash:checked ~ .gateway-payment,
+    #nagad:checked ~ .gateway-payment,
+    #rocket:checked ~ .gateway-payment{
+      display: block;
+    }
+    .gateway-payment{
+      display: none;
+      font-size: 0.8rem;
+      box-sizing: border-box; 
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+      margin-top: 10px;
+      z-index: 10;
+      grid-column: 1 / span 3;
+      transition: all 1s linear;
+      
+      &::before {
+        content: '';
+        height: 30px; 
+        width: 30px; 
+        background-color: white;
+        position: absolute;
+        top: -10px;
+        left: 40px;
+        transform: rotateZ(45deg);
+        z-index: -5;
+      }
+    }
+    .bkash-payment > p {
+      color: green;
+    }
+    .gateway-payment > p:first-of-type ~ * {
+      margin: 20px 0;
+    }
+    .gateway-payment span {
+      color: green;
+      font-weight: bold;
+    }
+    .gateway-logo {
+      width: 80px;
+      aspect-ratio: 2/1;
+      transform: translateY(-5px);
+    }
+    .gateway-name {
+      display: grid;
+      grid-template-columns: 10% 60% 30%;
+      grid-template-rows: repeat(2,min-content);
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+    }
+    .gateway-varify {
+      display: flex;
+      flex-direction: column;
+      
+      & input {
+        margin: 0 !important;
+        padding: 10px;
+        outline: none;
+        border: 1.2px dashed black;
+        border-radius: 5px;
+      }
+    }
+    .delivery-charge {
+      font-size: 0.9rem;
+      display: grid;
+      grid-template-columns: 8% 90%;
+      grid-template-rows: repeat(3,min-content);
+      gap: 15px;
+      align-items: start;
+      
+      & input {
+        padding: 0px !important;
+        accent-color: limegreen;
+      }
+      
+      & span {
+        color: #f9ca2d;
+      }
+      & input:disabled + label {
+        opacity: 0.5;
+      }
+    }
+    
+    label[for='name'],
+    label[for='email'],
+    label[for='postcode'],
+    label[for='city'],
+    label[for='address']
+    {
+      position: relative;
+      
+      &::after {
+        position: absolute;
+        top: 2px;
+        right: -8px;
+        content: '';
+        height: 5.5px;
+        width: 5.5px;
+        background-color: red;
+        border-radius: 100%;
+      }
+    }
+    input::placeholder{
+      pointer-events: none;
+    }

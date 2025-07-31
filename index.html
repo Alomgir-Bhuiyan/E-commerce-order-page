@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Order Form</title>
+  <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+    <div class="order">
+      <h1>Order</h1>
+      <h3>Billing Information</h3>
+      <div class="billing-address">
+        <form class=".billing" action="" method="get" accept-charset="utf-8">
+          <label for="name">Name</label><br/>
+          <input type="text" name="name" id="name" placeholder="Your name" required/>
+          <br>
+          <label for="email">Email</label><br>
+          <input type="email" name="email" id="email" placeholder="example@example.com" required/>
+          <br>
+          <div class="in-one-row">
+            <div class="por-1">
+              <label for="country">Country</label><br />
+              <select name="country" id="country">
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Italy">Italy</option>
+                <option value="Japan">Japan</option>
+              </select>
+            </div>
+            <div class="por-2">
+              <label for="postcode">Postal Code</label><br>
+              <input type="number" name="postcode" id="postcode" placeholder="POST CODE" required/><br>
+            </div>
+              
+          </div>
+          
+          <label for="city">City</label><br>
+          <input type="text" name="city" id="city" placeholder="City" required/><br>
+          
+          <label for="address">Address</label><br>
+          <input type="text" name="address" id="address" placeholder="Address" required/>
+        </form>
+      </div>
+      <hr style="width:95%; margin:auto; border-top: 0; border-color: rgba(0,0,0,0.5);">
+      <div class="info">
+        <p>Item (1)</p>
+        
+        <p>$20.4</p>
+        
+        <p>Shipping fes</p>
+        
+        <p>$4.8</p>
+        <p>Vat</p><p>$2.9</p>
+      </div>
+      
+      <h3>Delivery Charge</h3> 
+      <div class="delivery-charge">
+        <input type="radio" name="delivery" id="free" disabled>
+        <label for="free"> FREE Delivery <br><span>(Estimated delivery in 14 working days)</span></label>
+          
+        <input type="radio" name="delivery" id="medium" checked>
+        <label for="medium"><span style="color: green; font-weight: bolder;">($ 2 USD)</span> Fast Delivery <br><span>(Estimated delivery in 72 hour)</span></label>
+        
+        <input type="radio" name="delivery" id="fast">
+        <label for="fast"><span style="color: green; font-weight: bolder;">($ 5 USD)</span> Super Fast Delivery <br><span>(Estimated delivery in 24 hour)</span></label>
+      </div>
+      
+      <div class="info">
+        
+        <p>Total</p>
+        
+        <p>$28.1</p>
+      </div>
+          
+      <hr style="width:95%; margin:auto; border-top: 0; border-color: rgba(0,0,0,0.5);">
+      <h3>Payment Gateway</h3>
+      
+      <div class="payment-gateway">
+        
+        <div class="gateway-name">
+          
+          <input type="radio" name="payment-gateway" id="bkash" checked required/>
+          
+          <label for="bkash">Pay with bKash</label>
+          <img class="gateway-logo" src="./assets/images/bkash.png" alt="" />
+          <div class="gateway-payment">
+            <p>You need to send us $ 28.1</p>
+            <h4>Account Type: <span>bKash Personal</span></h4>
+            <h4>Account Number: <span>01406147294</span></h4>
+            <hr style="width:95%; margin:auto; border-top: 0; border-color: rgba(0,0,0,0.5);">
+            
+            <div class="gateway-varify">
+              <label for="acc-num">Your bKash Account Number</label><br>
+              <input type="number" name="acc-num" id="acc-num" placeholder="01XXXXXXXXX" /><br>
+                
+              <label for="trx-id">Your bKash Transition ID</label><br>
+              <input type="text" name="trx-id" id="trx-id" placeholder="29GSOY58HJ" /><br>
+            </div>
+              
+          </div>
+        </div>
+        <div class="gateway-name">
+          
+          <input type="radio" name="payment-gateway" id="nagad" required/>
+          
+          <label for="nagad">Pay with Nagad</label>
+          <img class="gateway-logo" src="./assets/images/nagad.png" alt="nagad" />
+          <div class="gateway-payment">
+            <p>You need to send us $ 28.1</p>
+            <h4>Account Type: <span>Nagad Personal</span></h4>
+            <h4>Account Number: <span>01406147294</span></h4>
+            <hr style="width:95%; margin:auto; border-top: 0; border-color: rgba(0,0,0,0.5);">
+            
+            <div class="gateway-varify">
+              <label for="acc-num">Your Nagad Account Number</label><br>
+              <input type="number" name="acc-num" id="acc-num" placeholder="01XXXXXXXXX" /><br>
+                
+              <label for="trx-id">Your Nagad Transition ID</label><br>
+              <input type="text" name="trx-id" id="trx-id" placeholder="29GSOY58HJ" /><br>
+            </div>
+              
+          </div>
+        </div>
+        <div class="gateway-name">
+          
+          <input type="radio" name="payment-gateway" id="rocket" required/>
+          
+          <label for="rocket">Pay with Rocket</label>
+          <img class="gateway-logo" src="./assets/images/rocket.png" alt="rocket" />
+          <div class="gateway-payment">
+            <p>You need to send us $ 28.1</p>
+            <h4>Account Type: <span>Rocket Personal</span></h4>
+            <h4>Account Number: <span>01406147294</span></h4>
+            <hr style="width:95%; margin:auto; border-top: 0; border-color: rgba(0,0,0,0.5);">
+            
+            <div class="gateway-varify">
+              <label for="acc-num">Your Rocket Account Number</label><br>
+              <input type="number" name="acc-num" id="acc-num" placeholder="01XXXXXXXXX" /><br>
+                
+              <label for="trx-id">Your Rocket Transition ID</label><br>
+              <input type="text" name="trx-id" id="trx-id" placeholder="29GSOY58HJ" /><br>
+            </div>
+              
+          </div>
+        </div>
+  
+        
+      </div>
+      
+      <div class="order-btn">
+        <a href="#">Place Order</a>
+      </div>
+    </div>
+</body>
+</html>       
+        <p>Shipping fes</p>
+        
+        <p>$4.8</p>
+        <p>Vat</p><p>$2.9</p>
+      </div>
+      
+      <h3>Delivery Charge</h3> 
+      <div class="delivery-charge">
+        <input type="radio" name="delivery" id="free" disabled>
+        <label for="free"> FREE Delivery <br><span>(Estimated delivery in 14 working days)</span></label>
+          
+        <input type="radio" name="delivery" id="medium" checked>
+        <label for="medium"><span style="color: green; font-weight: bolder;">($ 2 USD)</span> Fast Delivery <br><span>(Estimated delivery in 72 hour)</span></label>
+        
+        <input type="radio" name="delivery" id="fast">
+        <label for="fast"><span style="color: green; font-weight: bolder;">($ 5 USD)</span> Super Fast Delivery <br><span>(Estimated delivery in 24 hour)</span></label>
+      </div>
+      
+      <div class="info">
+        
+        <p>Total</p>
+        
+        <p>$28.1</p>
+      </div>
+          
+      <hr style="width:95%; margin:auto; border-top: 0; border-color: rgba(0,0,0,0.5);">
+      <h3>Payment Gateway</h3>
+      
+      <div class="payment-gateway">
+        
+        <div class="gateway-name">
+          
+          <input type="radio" name="payment-gateway" id="bkash" checked required/>
+          
+          <label for="bkash">Pay with bKash</label>
+          <img class="gateway-logo" src="./assets/images/bkash.png" alt="" />
+          <div class="gateway-payment">
+            <p>You need to send us $ 28.1</p>
+            <h4>Account Type: <span>bKash Personal</span></h4>
+            <h4>Account Number: <span>01406147294</span></h4>
+            <hr style="width:95%; margin:auto; border-top: 0; border-color: rgba(0,0,0,0.5);">
+            
+            <div class="gateway-varify">
+              <label for="acc-num">Your bKash Account Number</label><br>
+              <input type="number" name="acc-num" id="acc-num" placeholder="01XXXXXXXXX" /><br>
+                
+              <label for="trx-id">Your bKash Transition ID</label><br>
+              <input type="text" name="trx-id" id="trx-id" placeholder="29GSOY58HJ" /><br>
+            </div>
+              
+          </div>
+        </div>
+        <div class="gateway-name">
+          
+          <input type="radio" name="payment-gateway" id="nagad" required/>
+          
+          <label for="nagad">Pay with Nagad</label>
+          <img class="gateway-logo" src="./assets/images/nagad.png" alt="nagad" />
+          <div class="gateway-payment">
+            <p>You need to send us $ 28.1</p>
+            <h4>Account Type: <span>Nagad Personal</span></h4>
+            <h4>Account Number: <span>01406147294</span></h4>
+            <hr style="width:95%; margin:auto; border-top: 0; border-color: rgba(0,0,0,0.5);">
+            
+            <div class="gateway-varify">
+              <label for="acc-num">Your Nagad Account Number</label><br>
+              <input type="number" name="acc-num" id="acc-num" placeholder="01XXXXXXXXX" /><br>
+                
+              <label for="trx-id">Your Nagad Transition ID</label><br>
+              <input type="text" name="trx-id" id="trx-id" placeholder="29GSOY58HJ" /><br>
+            </div>
+              
+          </div>
+        </div>
+        <div class="gateway-name">
+          
+          <input type="radio" name="payment-gateway" id="rocket" required/>
+          
+          <label for="rocket">Pay with Rocket</label>
+          <img class="gateway-logo" src="./assets/images/rocket.png" alt="rocket" />
+          <div class="gateway-payment">
+            <p>You need to send us $ 28.1</p>
+            <h4>Account Type: <span>Rocket Personal</span></h4>
+            <h4>Account Number: <span>01406147294</span></h4>
+            <hr style="width:95%; margin:auto; border-top: 0; border-color: rgba(0,0,0,0.5);">
+            
+            <div class="gateway-varify">
+              <label for="acc-num">Your Rocket Account Number</label><br>
+              <input type="number" name="acc-num" id="acc-num" placeholder="01XXXXXXXXX" /><br>
+                
+              <label for="trx-id">Your Rocket Transition ID</label><br>
+              <input type="text" name="trx-id" id="trx-id" placeholder="29GSOY58HJ" /><br>
+            </div>
+              
+          </div>
+        </div>
+  
+        
+      </div>
+      
+      <div class="order-btn">
+        <a href="#">Place Order</a>
+      </div>
+    </div>
+</body>
+</html>
